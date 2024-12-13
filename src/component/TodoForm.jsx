@@ -9,9 +9,12 @@ export default function TodoForm(){
 
 
 function handleSubmit(e){
+  if(inp !==""){
     e.preventDefault()
     dispatch(addTodo(inp))
     setInp('')
+
+  }
 
 
 }
@@ -32,7 +35,7 @@ function handleSubmit(e){
 
 
 
-<input type="text" value={inp} placeholder="Write your Notes..." onChange={(e)=> setInp(e.target.value)} className=" border  w-full border-black/10 sm:rounded-l-lg sm:rounded-none  rounded-md  px-3 outline-none duration-150 bg-white/20 py-1.5 font-serif   "/>
+<input type="text" value={inp} placeholder="Write your Notes..." onChange={(e)=> setInp(e.target.value)} className=" inline-block border   w-full border-black/10 sm:rounded-l-lg sm:rounded-none  rounded-md  px-3 outline-none duration-150 bg-white/20 py-1.5 font-serif   "/>
 
 <button 
   type="submit" className="sm:rounded-r-lg sm:px-3 font-bold px-10 py-[7px]  sm:py-[7px] sm:rounded-none rounded-lg bg-green-600   text-white shrink-0">
